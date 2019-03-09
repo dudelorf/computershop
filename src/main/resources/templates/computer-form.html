@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>New computer</title>
+</head>
+
+<body>
+	<a th:href="@{/}">
+		<span>Home</span>
+	</a>	
+	<div th:if="${#fields.hasErrors('${computer.*}')}">
+		<h2 th:errors="${computer.*}"></h2>
+	</div>
+	
+	<form method="POST" th:object="${computer}">
+		<label for="name">Name:</label> 
+		<input type="text" name="name" th:value="*{name}" placeholder="Enter computer name" />
+
+		<div th:each="part : ${parts}">
+			<span th:text="${part.name}">Part name</span> 
+			<input type="checkbox" th:field="*{parts}" name="parts" th:value="${part.id}" />
+		</div>
+		<button type="submit">Save</button>
+		
+	</form>
+</body>
+</html>

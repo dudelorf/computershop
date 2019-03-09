@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="mysql5-1690da893d6-70cdc43722ee595f" provider="mysql" driver="mysql5" name="MySQL - localhost" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="localhost" port="3306" server="" database="" url="jdbc:mysql://localhost:3306/" user="root" password="EhcCJiGi" type="dev"/>
+	</data-source>
+	<filters/>
+</data-sources>
